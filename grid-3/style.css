@@ -11,6 +11,7 @@ li {
   display: grid;
   grid-template-columns: 1fr 3fr 1fr;
   column-gap: 30px;
+  position: relative;
 }
 header {
   grid-column: span 3;
@@ -34,51 +35,53 @@ article h2 {
 }
 article img {
   width: 100%;
+  border: 4px solid lightskyblue;
 }
-article p{
-    margin-top: 30px;
-    line-height: 2em;
-    color: #777;
+article p {
+  margin-top: 30px;
+  line-height: 2em;
+  color: #777;
 }
-aside{
-    padding: 30px;
-    border-left: 1px solid #ddd;
+aside {
+  padding: 30px;
+  border-left: 1px solid #ddd;
 }
-footer{
-    grid-column: span 3;
-    text-align: center;
-    border-top: 1px solid #ddd;
-    padding: 30px auto;
-    background-color: #ddd;
+footer {
+  grid-column: span 3;
+  text-align: center;
+  border-top: 1px solid #ddd;
+  padding: 30px auto;
+  background-color: #ddd;
 }
 /* responsive */
 @media screen and (max-width: 1200px) {
-    nav{
-        grid-column: span 3;
-        border-right: 0;
-        border-bottom: 1px solid #ddd;
-    }
-    nav li{
-        display: inline-block;
-        margin-right: 10px;
-    }
-    article{
-        grid-column: span 2;
-    }
-    aside{
-        padding: 16px;
-    }
+  nav {
+    grid-column: span 3;
+    border-right: 0;
+    border-bottom: 1px solid #ddd;
+  }
+  nav li {
+    display: inline-block;
+    margin-right: 10px;
+  }
+  article {
+    grid-column: span 2;
+  }
+  aside {
+    padding: 16px;
+  }
 }
 @media screen and (max-width: 980px) {
-    nav, article, aside{
-        grid-column: span 3;
-    }
-    aside{
-        border-left: 0;
-        border-top: 1px solid #ddd;
-    }
-    article h2{
-        font-size: 2.5em;
-    }
-    
+  nav,
+  article,
+  aside {
+    grid-column: span 3;
+  }
+  aside {
+    border-left: 0;
+    border-top: 1px solid #ddd;
+  }
+  article h2 {
+    font-size: 2.5em;
+  }
 }
